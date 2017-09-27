@@ -95,7 +95,31 @@ Setze den Bonus für alle Vertreter auf 500.
 
 ### Lösung
 ```sql
-ALTER TABLE Vertreter
-ADD (bonus NUMBER(4));
-
+INSERT INTO Vertreter
+(bonus)
+values (500);
 ```
+
+## Aufgabe 11
+Ändere den Datentyp für die Spalte vname in der Tabelle vertreter auf VARCHAR2(20);
+
+### Lösung
+```sql
+ALTER TABLE Vertreter
+MODIFY (VNAME VARCHAR2(20));
+```
+
+## Aufgabe 12
+An welchen Tagen wurden Verkäufe getätigt? Erzeuge folgende Ausgabe:
+	DATUM
+	-----
+	27.06.15
+	28.06.15
+
+### Lösung
+```sql
+SELECT DISTINCT DATUM
+FROM Verkauf;
+```
+
+
